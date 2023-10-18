@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<html lang="it">
+<head>
+  <title> InfinitamenteFisica - Lezioni di fisica per le scuole superiori </title>
+  <meta name="description" content="Lezioni di fisica per le scuole superiori, spaziando dall’infinitamente piccolo all’infinitamente grande. Infinitamentefisica: dal nucleo atomico e le particelle subatomiche all’evoluzione dell’Universo.">
+  <meta name="keywords" content="infinitamentefisica, infinitamente fisica, infinitamentefisica altervista, ripetizioni fisica, coronavirus, videlezioni fisica, videolezioni">
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <link rel="stylesheet" href="dropdown.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background-image: url("immagini/sfondo.jpg");
+ }
+
+/* Header */
+.header {
+  padding: 30px;
+  text-align: center;
+  background-image: url("immagini/header_sfondo.jpg");
+}
+
+/* Top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Top navigation links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  transition: .8s ease;
+  background-color: #ddd;
+  color: black;
+  border-left-style: solid;
+  border-left-width: 10px;
+}
+
+.navigation {
+font-size:23pt;
+font-family:times new roman;
+font-weight: bold;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Add a card */
+.card {
+  background-color:#404040;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  padding: 20px;
+  width: 15%;
+  height: auto;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+  padding: 20px;
+  width: 17%;
+  height: auto;
+  margin-right: 10px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #404040;
+  margin-top: 20px;
+  font-style: italic;
+  font-size: 18px;
+  color: #ecf0f1;
+  font-family: terminal;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+    span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+/* Input username, passowrd */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Input date */
+input[type=date] {
+  width: auto;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #333;
+  transition: .8s ease;
+  color: white;
+  padding: 14px 16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+}
+
+button:hover {
+ background-color: #ddd;
+ color: black;
+ transition: .8s ease;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #333;
+}
+
+/* Position of the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 20%;
+  height: 5%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 18px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+</style>
+</head>
+
+<body>
+<div class="header">
+  <br>
+<img src="immagini/header_scritta.png" alt="INFINITAMENTEFISICA" width="90%" height="90"/>
+<h1><span style="visibility:hidden; font-size:0.5px;"> <p> fisica per le scuole superiori, equivalenze, fisica nucleare, fisica moderna </p> </span> </h1>
+</div>
+
+<div id="myDropdown1" class="dropdown-content" style="float:bottom; height: 200px;">
+  <a href="videolezioni_primoanno.html">I Anno</a>
+  <a href="404.html">II Anno</a>
+  <a href="404.html">III Anno</a>
+  <a href="404.html">IV Anno</a>
+  <a href="videolezioni_quintoanno.html">V Anno</a>
+</div>
+
+<div class="topnav navigation"><a href="index.html">HOME</a> <button onclick="dropdown_function1()" class="dropbtn">VIDEOLEZIONI</button> <a href="contattami.html">CONTATTAMI</a> <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; font-size:23pt; font-weight:bold; transition:.8s ease; font-family:times; float:right;">ACCEDI</button>
+</div>
+
+<div class="row">
+<div class="leftcolumn">
+<div class="card">
+<h5><span style="color:#ecf0f1; font-size:23pt; font-family:courier new, monospace;"><em>Pubblicato il 5 Aprile 2020</em></span></h5>
+<p><span style="color:#ecf0f1; font-size:23pt; font-family:courier new, monospace;"><em>FISICA NUCLEARE #1</em></span></p>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=Nd7cV2MGW7w" alt="Video non supportato" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>&nbsp;</p>
+<h5><span style="color:#ecf0f1; font-size:23pt; font-family:courier new, monospace;"><em>Pubblicato il 6 Aprile 2020</em></span></h5>
+<p><span style="color:#ecf0f1; font-size:23pt; font-family:courier new, monospace;"><em>&nbsp;FISICA NUCLEARE #2</em></span></p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/watch?v=Nd7cV2MGW7w" alt="Video non supportato" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<h5>&nbsp;</h5>
+<h5><span style="color:#ecf0f1; font-size:23pt; font-family:courier new, monospace;"><em>Pubblicato il 20 Aprile 2020</em></span></h5>
+<p><span style="color:#ecf0f1; font-size:23pt; font-family:courier new, monospace;"><em>FISICA NUCLEARE #3</em></span></p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/watch?v=Nd7cV2MGW7w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p>&nbsp;</p>
+<h5><span style="color:#ecf0f1; font-size:23pt; font-family:courier new, monospace;"><em>Pubblicato il 22 Aprile 2020</em></span></h5>
+<p><span style="color:#ecf0f1; font-size:23pt; font-family:courier new, monospace;"><em>FISICA NUCLEARE #4</em></span></p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/watch?v=Nd7cV2MGW7w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p>&nbsp;</p>
+<h5><span style="color:#ecf0f1; font-size:23pt; font-family:courier new, monospace;"><em>Pubblicato il 24 Aprile 2020</em></span></h5>
+<p><span style="color:#ecf0f1; font-size:23pt; font-family:courier new, monospace;"><em>FISICA MODERNA #1</em></span></p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/watch?v=Nd7cV2MGW7w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<h5>&nbsp;</h5>
+<h5><span style="color:#ecf0f1; font-size:23pt; font-family:courier new, monospace;"><em>Pubblicato il 3 maggio 2020</em></span></h5>
+<p><span style="color:#ecf0f1; font-size:23pt; font-family:courier new, monospace;"><em>FISICA MODERNA #2</em></span></p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/watch?v=Nd7cV2MGW7w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<h5>&nbsp;</h5>
+<h5><span style="color:#ecf0f1; font-size:23pt; font-family:courier new, monospace;"><em>Pubblicato il 3 Maggio 2020</em></span></h5>
+<p><span style="color:#ecf0f1; font-size:23pt; font-family:courier new, monospace;"><em>FISICA MODERNA #3</em></span></p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/watch?v=Nd7cV2MGW7w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<h5>&nbsp;</h5>
+</div>
+</div>
+
+<div class="rightcolumn">
+<div class="card">
+<img src="immagini/faccia.jpg" alt="Immagina non supportata dal tuo dispositivo" width="60%" height="60%" />
+<p><span style="font-family:andale mono, monospace; font-size:15pt; color:#ecf0f1;"><em>Mi chiamo Enrica; nel 1994 mi sono laureta in fisica svolgendo la tesi al CERN di Ginevra, nel 1999 ho conseguito il PhD in fisica presso il Politecnico di Torino; ho poi lavorato qualche anno in R & D per una multinazionale nel settore dell'auto, prima di dedicarmi all'insegnamento. Ora sono 15 anni che insegno con passione la mia materia nelle scuole superiori. Da sempre sono alla ricerca di metodi nuovi per fare didattica, con l'obiettivo di stimolare l'interesse per gli studenti, utilizzando tutti gli strumenti che la tecnologia mette a disposizione. </em></span></p>
+</div>
+<div class="card">
+<span style="font-family:comic sans ms; font-size:17pt; color:#F0DC82;"><strong>Seguimi anche su:<br> <br></strong></span>
+<a href="https://www.youtube.com/watch?v=Nd7cV2MGW7w" target="_blank" class="fa fa-youtube"></a>
+<a href="https://www.youtube.com/watch?v=Nd7cV2MGW7w" target="_blank" class="fa fa-facebook"></a>
+</div>
+<div class="card">
+<span style="font-family:comic sans ms; color:#F0DC82; font-size:17pt;"><strong>Link Utili:</strong></span>
+<p><a style="color:#e74c3c; font-size:17pt;" href="http://phet.colorado.edu/it/simulations/category/physics" target="_blank" rel="noopener">Phet Colorado</a></p>
+<p><a style="color:#e74c3c; font-size:17pt;" href="http://www.youtube.com/channel/UCiEHVhv0SBMpP75JbzJShqw" target="_blank" rel="noopener">Lezioni MIT Boston</a></p>
+<p><a style="color:#e74c3c; font-size:17pt;" href="http://particleadventure.org/" target="_blank" rel="noopener">Per chi ama la fisica delle particelle</a></p>
+<p><a style="color:#e74c3c; font-size:17pt;" href="http://www.claudiocancelli.it/web_education/fisica.htm" target="_blank" rel="noopener">Link APP in italiano</a></p>
+<p><a style="color:#e74c3c; font-size:17pt;" href="http://www.biologycorner.com/worksheets/virtual_labs_glencoe.html" target="_blank" rel="noopener">Laboratori virtuali</a></p>
+<p><a style="color:#e74c3c; font-size:17pt;" href="http://iris.unito.it/handle/2318/1526428#.Xpyv9JlS_IU" target="_blank" rel="noopener">Articolo di didattica</a></p>
+</div>
+</div>
+</div>
+
+<div class="footer">
+<h2>"E' l'arte suprema dell'insegnante, risvegliare la gioia della creativit&agrave; e della conoscenza" - Albert Einstein</h2>
+</div>
+
+<span style="text-align:center; color:white;">
+<p> <br> <br> © Copyright 2020-2023 by Infinitamentefisica </p> </span>
+
+<div id="id01" class="modal">
+
+  <form class="modal-content animate" action="/login_process.php" method="POST">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Chiudi">&times; </span>
+      <img src="/immagini/favicon.ico" alt="Avatar" class="avatar">
+   </div>
+
+    <div class="container">
+      <labe for="user"><b><i>Username</i></b></label>
+      <input type="text" name="user" required>
+
+      <label><b><i>Password</i></b></label>
+      <input type="password" name="pass" required>
+
+	  <label><b><i>Voglio prenotare il </i></b></label>
+      <input type="date" name="data" required>
+
+	  <label><b><i>alle </i></b></label>
+      <input type="time" name="ora" required>
+
+      <button type="submit"><strong>PRENOTA LEZIONE </strong></button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancella</button>
+       <span style="float:right;"> Hai dimenticato la password? Usa la sezione <a href="contattami.html">CONTATTAMI</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+function dropdown_function1() {
+  document.getElementById("myDropdown1").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
